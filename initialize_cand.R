@@ -2,7 +2,7 @@
 #'
 #' Creates a presidential candidate
 #'
-#' @param name A character object, the name of the candidatw
+#' @param name A character object, the name of the candidate
 #' @param party A character object, what party the candidate belongs to.
 #' @param delegatesWon A numeric object, the number of delegates won.
 #' @param delegatesNeeded A numeric object with the same dimensionality as \code{delegatesWon}.
@@ -33,5 +33,5 @@ definition = function(name, party, delegatesWon){
     if (party == "Republican"){
       delegatesNeeded = 1237 - delegatesWon;
     }
-return(new("Candidate", name = name, delegates_won = delegates_won, party = party, delegates_needed = delegates_needed))
+return(new("Candidate", name = name, party = party, delegates_won = delegates_won, delegates_needed = delegates_needed))
           })
