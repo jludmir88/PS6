@@ -22,16 +22,10 @@
 #' @aliases initizalize_cand,ANY-method
 #' @export
 setGeneric(name = "initialize_cand", 
-definition = function(name, party, delegatesWon){
-standardGeneric("initialize_cand")}
+  definition = function(name, party, delegatesWon){
+  standardGeneric("initialize_cand")}
 )
 setMethod(f = "initialize_cand",# defining the name
-definition = function(name, party, delegatesWon){
-    if (party == "Democrat"){
-      delegatesNeeded = 2383 - delegatesWon;
-    }
-    if (party == "Republican"){
-      delegatesNeeded = 1237 - delegatesWon;
-    }
-return(new("Candidate", name = name, party = party, delegates_won = delegates_won, delegates_needed = delegates_needed))
+  definition = function(name, party, delegatesWon){
+  return(new("Candidate", name = name, party = party, delegates_won = delegates_won))
           })

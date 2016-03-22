@@ -37,5 +37,18 @@ validity = function(object){
     }
   }
 )
-
-#' @export
+setMethod("initialize", "Candidate", 
+function(.Object, name, party, delegatesWon){
+    .Object@name <- name
+    .Object@party <- party
+    .Object@delegatesWon <- delegatesWon
+  if(party == "Republican"){
+  .Object@delegatesNeeded <- (1237 - .Object@delegatesWon) 
+  }
+  if(party == "Democrat"){
+  .Object@delegatesNeeded <- (2383 - .Object@delegatesWon)
+  }
+            value=callNextMethod()
+            return(value)
+          }
+) 

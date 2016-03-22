@@ -1,0 +1,19 @@
+Package: CandidatePack
+Title: Presidential candidates and their statuses in primaries.
+Version: 0.1
+Author: Joseph Ludmir
+Maintainer: Joseph Ludmir <jludmir@wustl.edu>
+Description: Find the status of presidential candidates in primaries.
+Depends:
+    R (>= 3.0.0),
+    methods
+License: GPL (>= 2)
+Suggests:
+    devtools
+Collate:
+    'Candidate.R'
+    'print_cand.R'
+    'initialize_cand.r'
+    'show_cand.R'
+    'propNeeded_cand.R'
+RoxygenNote: 5.0.1
